@@ -14,8 +14,7 @@ class NewDescriptionScreen extends StatelessWidget {
           title: Text("Description"),
         ),
         body: ListTile(
-          title: Text(title.title),
-          leading: Icon(icons.icon),
+          trailing: Icon(icons.icon),
           subtitle: Text(description.description),
         ));
   }

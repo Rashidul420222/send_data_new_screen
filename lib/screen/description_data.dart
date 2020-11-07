@@ -17,13 +17,12 @@ class DescriptionScreen extends StatelessWidget {
         body: ListView.builder(
           itemCount: todos.length,
           itemBuilder: (context, index) => ListTile(
-            title: Text(todos[index].title),
-            trailing: Icon(todos[index].icon),
+            leading: Icon(todos[index].icon),
+            title: Text("First Data Pass ${todos[index].title}"),
             onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => NewDescriptionScreen(
-                          title: todos[index],
                           icons: todos[index],
                           description: todos[index],
                         ))),
